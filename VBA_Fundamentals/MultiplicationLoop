@@ -1,5 +1,5 @@
   
-Sub Multiplication_Loop()
+Sub MultiplicationLoop()
 Application.ScreenUpdating = False
 ''Defining sheets''
 Dim wb As Workbook
