@@ -6,12 +6,12 @@ Dim wb As Workbook
 Dim ws1 As Worksheet
 Set wb = Workbooks("Workbook1.xlsm")
 Set ws1 = wb.Sheets("Sheet1")
-
+LastRow1 = ws1.Range("A1").CurrentRegion.Rows.Count
 ''Column D = Column B * Column C''
 wb.Activate
 ws1.Activate
 Dim i As Integer
-For i = 2 To LastRow2
+For i = 2 To LastRow1
     ws1.Range("D" & i).Value = ws1.Range("B" & i).Value * ws1.Range("C" & i)
 Next
 Application.ScreenUpdating = True
