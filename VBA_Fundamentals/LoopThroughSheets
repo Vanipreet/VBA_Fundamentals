@@ -1,0 +1,21 @@
+Sub LoopThroughSheets()
+Application.ScreenUpdating = False
+''Defining sheets''
+Dim wb As Workbook
+Dim ws1 As Worksheet
+Dim Sh As Worksheet
+Set wb = Workbooks("Book1.xlsm")
+wb.Activate
+
+''Defining specified sheets on which loop will be applicable''
+For Each Sh In wb.Sheets(Array("Sheet1", "Sheet2"))
+
+''Loop Column E = (Column C - Column B)/ (ColumnD) on both sheets with variable number of rows''
+LastRow1 = Sh.Range("A1").CurrentRegion.Rows.Count
+Dim i As Integer
+    For i = 2 To LastRow1
+        Sh.Range("E" & i).Value = (Sh.Range("C" & i).Value - Sh.Range("B" & i).Value) / (Sh.Range("D" & i))
+    Next
+Next
+Application.ScreenUpdating = True
+End Sub
