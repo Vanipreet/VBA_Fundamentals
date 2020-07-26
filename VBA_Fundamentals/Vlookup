@@ -11,7 +11,7 @@ Set ws2 = wb.Sheets("Sheet1")
 wb.Activate
 ws2.Activate
 
-''Vlookup function''
+''Sheet 1 column B cells = vlookup Sheet 1 column A cells cells in Sheet 2 and picking 17th subsequent column cell; Vlookup''
 ws2.Range("B2").Value = Application.WorksheetFunction.Vlookup(ws2.Range("A2").Value, ws1.Range("A1:Z" & LastRow), 17, 0)
 wb.Save
 Application.ScreenUpdating = True
