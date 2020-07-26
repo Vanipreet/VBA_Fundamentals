@@ -1,12 +1,12 @@
 Sub DowhileLoop()
 Application.ScreenUpdating = False
-''Defining sheets
+''Defining sheets''
 Dim wb As Workbook
 Dim ws1 As Worksheet
 Set wb = Workbooks("Workbook1.xlsm")
 Set ws1 = wb.Sheets("Sheet1")
 
-''Verifying if condition met
+''Conditional Column B> 50; Verifying if condition met''
 wb.Activate
 ws1.Activate
 Dim i As Integer
