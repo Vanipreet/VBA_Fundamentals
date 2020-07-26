@@ -1,0 +1,17 @@
+Sub ComplexOperators()
+Application.ScreenUpdating = False
+''Defining sheets''
+Dim wb As Workbook
+Dim ws1 As Worksheet
+Set wb = Workbooks("Book1.xlsm")
+Set ws1 = wb.Sheets("Sheet1")
+LastRow1 = ws1.Range("A1").CurrentRegion.Rows.Count
+''Column E = (Column C - Column B)/ (ColumnD)''
+wb.Activate
+ws1.Activate
+Dim i As Integer
+For i = 2 To LastRow1
+    ws1.Range("E" & i).Value = (ws1.Range("C" & i).Value - ws1.Range("B" & i).Value) / (ws1.Range("D" & i))
+Next
+Application.ScreenUpdating = True
+End Sub
