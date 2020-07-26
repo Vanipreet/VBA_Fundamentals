@@ -5,7 +5,7 @@ Dim i As Object
 EditDate = Format(Now(), "ddmm")
 Yesterday = CDate(Evaluate("WORKDAY(TODAY(),-1)"))
 EditDate2 = Format(Yesterday, "ddmm")
-'''Login
+'''Login''
 Set i = CreateObject("InternetExplorer.Application")
 Application.Wait (Now + TimeValue("00:00:02"))
 i.Visible = True
@@ -27,7 +27,7 @@ Dim ele As MSHTML.IHTMLElement
 Dim eles As MSHTML.IHTMLElementCollection
 
 Set eles = idoc.getElementsByTagName("input")
-'''Click on the button
+'''Click on the button''
 For Each ele In eles
 If ele.ID = "html_but_login" Then
     ele.Click
