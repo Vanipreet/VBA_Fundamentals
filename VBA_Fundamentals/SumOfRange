@@ -1,0 +1,14 @@
+Sub SumOfRange()
+Application.ScreenUpdating = False
+''Defining sheets''
+Dim wb As Workbook
+Dim ws1 As Worksheet
+Set wb = Workbooks("Workbook1.xlsm")
+Set ws1 = wb.Sheets("Sheet1")
+LastRow1 = ws1.Range("A1").CurrentRegion.Rows.Count
+''Sum of range of column with variable cells; D21 = D2:D LastCell''
+wb.Activate
+ws1.Activate
+ws1.Range("D21").Value = WorksheetFunction.Sum(ws1.Range("D2:D" & LastRow1).Value)
+Application.ScreenUpdating = True
+End Sub
