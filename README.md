@@ -1,7 +1,7 @@
 # VBA_Fundamentals
 This respository serves the purpose of documenting fundamental VBA functions, 
 
-List of VBA functions available are as under
+List of VBA scripts for fundamental operations are available as under
 
 1. Sum of Range: https://github.com/Vanipreet/VBA_Fundamentals/blob/master/VBA_Fundamentals/SumOfRange 
 2. Multiplication Loop: https://github.com/Vanipreet/VBA_Fundamentals/blob/master/VBA_Fundamentals/MultiplicationLoop
