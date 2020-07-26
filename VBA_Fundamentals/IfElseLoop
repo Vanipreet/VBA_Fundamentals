@@ -1,12 +1,12 @@
 Sub IfElseLoop()
 Application.ScreenUpdating = False
-''Defining sheets
+''Defining sheets''
 Dim wb As Workbook
 Dim ws1 As Worksheet
 Set wb = Workbooks("Workbook1.xlsm")
 Set ws1 = wb.Sheets("Sheet1")
 LastRow = ws1.Range("A1").End(xlDown).Row
-''Verifying if condition met
+''Conditional Column B > 50; Verifying if condition met''
 wb.Activate
 ws1.Activate
 For i = 2 To LastRow
